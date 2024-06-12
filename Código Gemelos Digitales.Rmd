@@ -1,1 +1,266 @@
+---
+title: Gemelos Digitales para el mantenimiento preventivo-predictivo de puentes
+authors:
+  - name: Aberastain, Juan Ignacio
+    affiliation: Universidad Nacional de Cuyo
+    location: M5502-JMA. Mendoza, Argentina
+    email: juaniaberastainn@gmail.com
+    
+  - name: Cabrera Isquierdo, Lucía
+    affiliation: Universidad Nacional de Cuyo
+    location: M5502-JMA Mendoza, Argentina
+    email: luucabreraisquierdo@gmail.com
+    
+  - name: Cortez, Andrea Marina
+    affiliation: Universidad Nacional de Cuyo
+    location: M5502-JMA. Mendoza, Argentina
+    email: marina.cortez.3344@gmail.com
+    
+  - name: La Motta, Franco Emanuel
+    affiliation: Universidad Nacional de Cuyo
+    location: M5502-JMA. Mendoza, Argentina
+    email: flamotta71@gmail.com
+    
+  - name: Mampel, Martina
+    affiliation: Universidad Nacional de Cuyo
+    location: M5502-JMA. Mendoza, Argentina
+    email: mampelmartina@gmail.com
+  
+bibliography: references.bib
+biblio-style: unsrt
+output: rticles::arxiv_article
+---
+**Resumen**:
+ El presente artículo analiza la situación actual de la infraestructura de puentes en América Latina, caracterizada por el envejecimiento de las estructuras, la falta de mantenimiento adecuado y la exposición a condiciones ambientales adversas. Estos factores incrementan el riesgo de fallos estructurales, lo que genera importantes desafíos en términos de seguridad vial, conectividad y desarrollo económico.
+En este contexto, se propone la implementación de Gemelos Digitales (GD) y Sistemas de Monitorización Predictiva-Preventiva (SMPP) como herramientas innovadoras para la gestión eficiente de puentes,destacando el papel fundamental que pueden desempeñar los GD, SMPP, Machine Learning e Inteligencia Artificial en la gestión eficiente y segura de estos activos críticos. La implementación de estas tecnologías innovadoras permitirá garantizar la conectividad vial, promover el desarrollo económico y proteger la seguridad de las personas en la región.
+
+ **Palabras clave**:
+  - Gemelos Digitales
+  - Mantenimiento Predictivo-Preventivo
+  - BIM
+  - Infraestructura de Puentes
+  - Sensores IoT
+  - Monitorización Estructural
+  - Gestión de Puentes
+
+## Introducción:
+
+La infraestructura de puentes en América Latina enfrenta desafíos significativos debido al envejecimiento, falta de mantenimiento adecuado y condiciones ambientales adversas. El mantenimiento de la mayoría de los puentes se basa en inspecciones periódicas manuales y reparaciones reactivas cuando se detectan fallos o daños visibles. Este enfoque tiene varias desventajas entre las que se puede mencionar: la detección tardía del problema, los costos elevados de reparación, las interrupciones del tráfico y la falta de seguridad de los usuarios.La implementación de Gemelos Digitales (GD) junto con Sistemas de Monitorización Predictiva-Preventiva (MPP) se presenta como una solución innovadora para la gestión eficiente y el mantenimiento de estos puentes. El desarrollo de la tecnología BIM (Building Information Modeling),una forma de gemelo digital basado en modelos 3D, contribuye a mejorar todas las fases del ciclo de vida del puente, desde el diseño y construcción hasta el mantenimiento y operación, asegurando una gestión más eficiente, segura y sostenible de la infraestructura.
+
+## Estado del arte:
+
+Con el objetivo de describir y analizar las características, los métodos y la tecnologías empleadas para el desarrollo de modelos BIM y su uso para la gestión y mantenimiento de puentes, así como las tendencias y desafíos futuros, se desarrolla el siguiente estado del arte.
+
+### Gemelos Digitales en Infraestructura de Puentes
+
+Un Gemelo Digital es una representación virtual precisa y dinámica de un objeto físico, sistema o proceso. Los Gemelos Digitales se han utilizado en diversas aplicaciones industriales y ahora están ganando terreno en la gestión de infraestructura civil. Estos consisten en una réplica digital se actualiza en tiempo real con datos recopilados por sensores instalados en el objeto físico, permitiendo monitorear, simular y analizar su comportamiento y estado. Para el desarrollo de un modelo digital de un puente civil requiere de los siguientes pasos:
+
+#### Modelado Digital
+
+La creación de un modelo 3D preciso y detallado de un puente es un proceso complejo que implica la combinación de diversas tecnologías avanzadas. Entre las técnicas más utilizadas se encuentran el escaneo láser, la fotogrametría y el modelado BIM (Building Information Modeling).
+
+-   **Escaneo láser**: Capturando la geometría con precisión
+
+El escaneo láser es una técnica de medición sin contacto que utiliza pulsos de luz para capturar millones de puntos de datos que representan la superficie del puente. Estos datos, conocidos como nube de puntos, permiten crear una representación precisa de la geometría del puente, incluyendo sus dimensiones, detalles arquitectónicos y elementos estructurales.
+
+-   **Fotogrametría**: Extrayendo información de imágenes
+
+La fotogrametría es una técnica que utiliza fotografías para generar modelos 3D. Al tomar fotografías del puente desde diferentes ángulos y posiciones, es posible extraer información sobre la profundidad y textura de la estructura. Esta información se combina con la nube de puntos obtenida del escaneo láser para crear un modelo 3D completo y realista del puente.
+
+-   **Modelado BIM**: Unificando datos para una gestión integral
+
+El modelado BIM (Building Information Modeling) es un proceso que va más allá de la simple representación 3D. BIM integra información geométrica, de materiales, especificaciones técnicas y otros datos relevantes del puente en un modelo digital. Esto permite a los profesionales del sector de la construcción gestionar de manera eficiente el diseño, la construcción, la operación y el mantenimiento del puente durante todo su ciclo de vida.
+
+```{=tex}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{BIM PUENTE.jpg}
+    \renewcommand{\figurename}{Figura}
+    \caption{Modelado Digital de un puente}
+    \label{fig:imagen}
+\end{figure}
+```
+#### Integración de Sensores
+
+La incorporación de sensores IoT (Internet de las Cosas) en el puente físico representa un avance significativo en el ámbito de la monitorización estructural. Esta tecnología permite la recopilación de datos en tiempo real sobre variables críticas como vibraciones, tensiones, temperatura y desplazamientos, brindando información valiosa para la evaluación del estado del puente y la toma de decisiones oportunas en materia de mantenimiento y reparación.
+
+Existen diversas tecnologías IoT que pueden implementarse en puentes para la recopilación de datos:
+
+-   Sensores de Vibración: Estos sensores detectan las vibraciones del puente, proporcionando información sobre su estabilidad y resistencia.
+
+-   Sensores de Tensión: Estos sensores miden las tensiones en las estructuras del puente, permitiendo evaluar su integridad y detectar posibles deformaciones.
+
+-   Sensores de Temperatura: Estos sensores monitorean la temperatura del puente, lo cual es importante para comprender su comportamiento bajo diferentes condiciones climáticas.
+
+-   Sensores de Desplazamiento: Estos sensores registran los movimientos del puente, brindando información sobre su estabilidad y resistencia a cargas externas.
+
+```{=tex}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Sensores IoT en puentes.jpg}
+    \renewcommand{\figurename}{Figura}
+    \caption{Sensor IoT}
+    \label{fig:imagen}
+\end{figure}
+```
+\newpage
+
+#### Plataforma de Integración de Datos
+
+Un sistema centralizado juega un papel crucial en la gestión de estos gemelos digitales. Este sistema integra y almacena los datos de los sensores y el modelo digital, permitiendo su análisis y visualización.
+
+Los sistemas centralizados permiten:
+
+-   Integración de datos: Recopila información de diversos sensores IoT ubicados en el puente, incluyendo sensores de tensión, vibración, inclinación, temperatura, humedad y acelerómetros.
+-   Almacenamiento de datos: Mantiene un registro histórico de los datos recopilados, permitiendo el análisis de tendencias y la detección de patrones.
+-   Análisis de datos: Aplica técnicas de análisis de datos para extraer información valiosa sobre el estado del puente, como la identificación de posibles fallos estructurales o la predicción de la vida útil del puente.
+-   Visualización de datos: Presenta la información de manera clara y accesible a través de dashboards interactivos, facilitando la toma de decisiones informadas.
+
+```{=tex}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{usBIM.IoT.jpg}
+    \renewcommand{\figurename}{Figura}
+    \caption{Integración y procesamiento de datos}
+    \label{fig:imagen}
+\end{figure}
+```
+#### Simulación y Análisis
+
+Se utilizan los datos recopilados para realizar simulaciones y análisis predictivos que anticipen posibles fallos estructurales.
+
+Un sistema de monitoreo de puentes es un conjunto de herramientas y tecnologías utilizadas para evaluar y mantener las condiciones estructurales de los puentes a lo largo del tiempo. Permite detectar posibles problemas o daños estructurales, proporcionando información útil para el mantenimiento y la gestión de los puentes. Un sistema completo y profesional consta de los siguientes componentes principales:
+
+-   **Sensores**:
+
+Los sensores son dispositivos que detectan y miden varios parámetros estructurales y ambientales del puente y que tienen gran influencia en su vida útil.
+
+-   **Sistema de adquisición de datos (DAS)**:
+
+Es el componente que recopila y almacena los datos de los sensores. Se compone de unidades de adquisición de datos, que realizan la conversión de la señal analógica a digital y almacenan los datos para su posterior procesamiento.
+
+-   **Sistema de comunicación**:
+
+Este sistema permite la transmisión de datos entre los sensores, el DAS y el centro de control. Puede utilizar diferentes tecnologías, como cables, redes inalámbricas o fibra óptica, dependiendo de las necesidades específicas del proyecto.
+
+-   **Centro de control y monitoreo**:
+
+Este es el lugar donde los operadores y los ingenieros analizan los datos recopilados por el sistema de monitoreo. El centro de control está equipado con software y hardware dedicados al procesamiento y visualización de datos, lo que permite una fácil interpretación de la información recopilada.
+
+-   **Software de análisis y diagnóstico**:
+
+Estos programas se utilizan para procesar y analizar los datos recopilados, con el fin de identificar cualquier anomalía o tendencia que pueda indicar problemas estructurales. El software puede incluir algoritmos de aprendizaje automático, modelos numéricos y técnicas de análisis estadístico para mejorar la fiabilidad y precisión de los diagnósticos.
+
+-   **Sistema de alarma y notificación**:
+
+En caso de detectar condiciones críticas o potencialmente peligrosas, el sistema de monitoreo puede generar automáticamente alarmas y notificaciones para alertar a los operadores e ingenieros responsables. Esto permite una intervención oportuna para prevenir daños mayores o situaciones de peligro.
+
+Con usBIM.IoT es posible integrar modelos BIM y sistemas IoT. Es posible cargar el modelo 3D BIM dentro de la plataforma, completo con los sensores aplicados a la infraestructura real. Los sensores se asocian con un color y un rango de valores de referencia. Cuando llegan los datos detectados por los sensores, el modelo 3D se actualiza en tiempo real, informando los resultados detectados por los sensores en el sitio.
+
+```{=tex}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Análisis y simulación.jpg}
+    \renewcommand{\figurename}{Figura}
+    \caption{Simulación y análisis de fallos estructurales}
+    \label{fig:imagen}
+\end{figure}
+```
+### Casos de Estudio y Desarrollo
+
+Diversos estudios y proyectos han demostrado el potencial de los GD y SMPP en la gestión de puentes:
+
+-   **Chile**: Puente Chacao: El puente colgante más largo de las Américas, que conecta la isla de Chiloé con el continente, utiliza un sistema de monitoreo basado en sensores de fibra óptica y acelerómetros para detectar vibraciones y deformaciones.
+
+    ```{=tex}
+    \begin{figure}[h]
+      \centering
+      \includegraphics[width=0.5\textwidth]{Puente Chacao.jpg}
+      \renewcommand{\figurename}{Figura}
+      \caption{Puente Chacao,Chile}
+      \label{fig:imagen}
+    \end{figure}
+    ```
+
+\newpage
+
+-   **Argentina**: Este puente sobre el río Paraná se beneficia de un sistema de monitoreo con sensores de inclinación, temperatura y vibración, que permite identificar anomalías en su estructura.
+
+```{=tex}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Puente Zárate- Brazo largo.jpg}
+    \renewcommand{\figurename}{Figura}
+    \caption{Puente Zárate-Brazo largo, Argentina}
+    \label{fig:imagen}
+\end{figure}
+```
+-   **México**:Un sistema de monitoreo con cámaras de alta resolución y sensores láser se emplea para inspeccionar el estado del puente y detectar posibles daños en su estructura.
+
+```{=tex}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Puente Tampico.jpg}
+    \renewcommand{\figurename}{Figura}
+    \caption{Puente Tampico, México}
+    \label{fig:imagen}
+\end{figure}
+```
+\newpage
+
+## Desarrollo Tecnológico
+
+En Latinoamérica se están desarrollando iniciativas para impulsar la investigación y el desarrollo de tecnologías relacionadas con los SMP. Algunas de estas iniciativas incluyen:
+
+-   Creación de centros de investigación especializados en monitoreo de infraestructuras.
+-   Desarrollo de software y herramientas de análisis de datos para la interpretación de información obtenida de los sensores.
+-   Capacitación de profesionales en el uso de tecnologías de monitoreo predictivo.
+
+## Propuestas de aplicación y mejora en América Latina
+
+Teniendo en cuenta la tecnología con la que se desarrolla el Mantenimiento Preventivo-Predictivo de los puentes en América Latina, se puede incorporar a estas tecnologías con Machine Learning y el uso de la Inteligencia Artificial, de tal forma que esto permita que los algoritmos de IA y ML puedan analizar los datos de los sensores y los gemelos digitales para identificar patrones y tendencias que indican posibles problemas, logrando un análisis de datos aún más preciso y sofisticado. Esto permitirá predecir fallas con mayor precisión y anticiparse a las reparaciones y una mayor capacidad de procesamiento de datos de teniendo en cuenta la relevancia de los mismos en la ida útil de los puentes.
+
+En aquellos países donde aún no se ha incorporado el usos de los GD y los SMPP para el mantenimiento de los puentes, es importante tener en cuenta las principales categorías de datos que se deben tener en cuenta:
+
+-   Información general sobre puentes: Incluye identificadores únicos, nombres e información sobre la ubicación (por ejemplo, estado, ciudad, latitud, longitud) de los puentes.
+
+-   Datos de construcción: Estos campos proporcionan información sobre cuándo se construyó o reconstruyó el puente, los materiales y el diseño del vano principal y los vanos de aproximación, e información sobre la estructura del tablero.
+
+-   Medidas y dimensiones: Abarca diversas medidas como la longitud del puente, el número de vanos, las alturas libres, la anchura de la calzada y otras características dimensionales.
+
+-   Calificaciones de estado: El conjunto de datos tiene varios campos que dan calificaciones de estado para diferentes partes del puente, como el tablero, la superestructura, la subestructura y otros. También hay campos para el estado general del puente, la valoración de la evaluación estructural y un valor crítico del puente por socavación.
+
+-   Información sobre el tráfico: Incluye campos como el tráfico medio diario, el tráfico previsto en el futuro y las designaciones relacionadas con el tráfico.
+
+-   Datos de mantenimiento e inspección: Hay información detallada sobre las inspecciones, la frecuencia de las mismas, la responsabilidad del mantenimiento, los costes de las mejoras y los trabajos propuestos.
+
+-   Estado operativo y clasificaciones: Esta sección proporciona campos como la clasificación de funcionamiento, la clasificación de inventario, el código de contabilización del puente y el estado del peaje.
+
+-   Información meteorológica y climática: Incluye campos relacionados con las condiciones meteorológicas y los datos climáticos que pueden afectar a la salud y longevidad del puente.
+
+Además, la incorporación y el uso de tecnologías avanzadas de comunicación como 5G pueden mejorar la precisión y eficiencia de estos sistemas de control.
+
+## Conclusiones
+
+La implementación de Gemelos Digitales con Sistemas de Monitorización Predictiva-Preventiva (SMPP) en puentes de América Latina puede mejorar significativamente la gestión y el mantenimiento de estas infraestructuras críticas. Sin embargo, existen desafíos técnicos y económicos que deben ser abordados, como o son la alta inversión inicial en los elementos necesarios para la implementación de los mismos y la necesidad de formación especializada para el personal encargado del manteniento de los puentes .También se deben tener en cuenta que son infraestructuras vitales que conectan personas, lugares y economías, y que con el paso del tiempo y la exposición a distintos elementos, estas estructuras pueden sufrir desgaste y fallos. Es allí donde entran en juego los Sistemas de Monitorización Predictiva-Preventiva (SMP-P), herramientas esenciales para predecir y prevenir fallos estructurales antes de que ocurran, preservando la integridad de los puentes y garantizando la seguridad de quienes los transitan.
+
+Estos sistemas combinan técnicas de monitoreo en tiempo real con análisis de datos avanzados para identificar anomalías en la estructura del puente. Sensores estratégicamente ubicados recopilan datos sobre la tensión, la vibración y el movimiento del puente, transmitiéndolos a centros de análisis donde se procesan y analizan.
+
+Los Gemelos Digitales con SMPP han revolucionado la gestión de puentes, proporcionando a los responsables de su mantenimiento una visión completa del estado de la estructura. Esto ha permitido:
+
+-   Reducción de costos: Al identificar problemas de forma temprana, se pueden realizar intervenciones de mantenimiento más precisas y menos costosas, evitando reparaciones mayores y costosas en el futuro.
+-   Mejora de la seguridad: La capacidad de predecir fallos estructurales permite a las autoridades tomar medidas preventivas, como el cierre temporal del puente o la limitación del tráfico, para evitar accidentes y proteger la vida de los usuarios.
+-   Mayor eficiencia: Los SMPP optimizan la planificación del mantenimiento, permitiendo programar intervenciones en función del estado real del puente y no de calendarios predefinidos.
+
+### Beneficios de los SMPP: una mirada hacia el futuro
+
+La implementación de SMPP en la gestión de puentes es una inversión en el futuro. Estos sistemas no solo garantizan la seguridad y la integridad de las infraestructuras actuales, sino que también sientan las bases para el desarrollo de puentes más inteligentes y resilientes en el futuro.
+
+## Referencias
+
+[@mousavi2024a]
+
+[@tita2023a]
+
+[@zhang2024a]
 
